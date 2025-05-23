@@ -1,0 +1,213 @@
+/* Header wrapper */
+.header {
+    background-color: #fff;
+    height: 120px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Top nav */
+.nav1 {
+    background-color: darkcyan;
+    width: 100%;
+}
+
+.nav2 {
+    width: 100%;
+}
+
+.nav2 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+
+.nav1 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+/* Logo */
+.logo a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Search bar */
+.search {
+    display: flex;
+    width: 500px;
+    align-items: center;
+    border-radius: 8px;
+    margin-left: 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.search input {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    padding: 5px 20px;
+    outline: none;
+    color: #000;
+}
+
+.search-icon {
+    width: 40px;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Icon group */
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.carticon {
+    font-size: 25px;
+    position: relative;
+    color: white;
+}
+
+.carticon .counter {
+    position: absolute;
+    top: -8px;
+    font-size: 15px;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 20px;
+    left: 20px;
+}
+
+/* Bottom nav */
+
+.nav2 ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav2 li {
+    padding: 10px 15px;
+}
+
+.nav2 li .navicons {
+    margin-right: 6px;
+    font-size: 18px;
+    color: #000;
+}
+
+
+.nav2 a {
+    background-image: linear-gradient(to right,
+            darkcyan,
+            darkcyan 50%,
+            #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav2 a::before {
+    content: '';
+    background: darkcyan;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav2 a:hover .navicons {
+    color: darkcyan;
+}
+
+.nav2 a:hover {
+    background-position: 0;
+}
+
+.nav2 a:hover::before {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav1 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .nav2 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav2 ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav2 li {
+        padding: 10px 0;
+    }
+}

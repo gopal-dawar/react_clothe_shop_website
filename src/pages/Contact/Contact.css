@@ -1,0 +1,114 @@
+.contact-us {
+    position: relative;
+    min-height: 100vh;
+    background: url("/image/about.jpg") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 130px 20px;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-us .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.contact-us .container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0,0,0,0.15);
+    z-index: 2;
+    margin-right: 40px;
+}
+
+.contact-us h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.contact-us .subtitle {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-us .form-group input,
+.contact-us .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #003333;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-us .form-group input:focus,
+.contact-us .form-group textarea:focus {
+    background-color: #fff;
+}
+
+.contact-us .form-group .error-msg {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 6px;
+    display: block;
+}
+
+.contact-us .form-group input.error,
+.contact-us .form-group textarea.error {
+    background-color: #ffe6e6;
+}
+
+.contact-us .btn-submit {
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, #00bfa5, #008b8b);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-us .container {
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .contact-us h2 {
+        font-size: 28px;
+    }
+}

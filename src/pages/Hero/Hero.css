@@ -1,0 +1,136 @@
+.hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: slideLeft 20s linear infinite;
+}
+
+.hero ul li {
+    font-size: 14px;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+    padding: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #000;
+}
+
+.hero ul .brands {
+    padding: 80px 100px;
+}
+
+.hero .brands .brandsimg {
+    width: 100px;
+    opacity: 0.3;
+    height: auto;
+}
+
+.hero .brands:hover .brandsimg {
+    opacity: 1;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.sliders {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.sliders .arrow {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.sliders .left {
+    left: 5%;
+}
+
+.sliders .right {
+    right: 5%;
+}
+
+.sliders .arrow:hover {
+    color: #fff;
+    background-color: darkcyan;
+}
+
+.sliders .slider {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.sliders .slide {
+    display: flex;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.sliders .imgs {
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+}
+
+.sliders .info {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: darkcyan;
+    max-width: 40%;
+    padding-right: 200px;
+}
+
+.sliders .info h1 {
+    font-size: 2.5rem;
+}
+
+.sliders .des {
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.sliders .info .btn {
+    background-color: darkcyan;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}

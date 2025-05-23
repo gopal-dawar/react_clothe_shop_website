@@ -1,0 +1,118 @@
+.offers {
+    padding: 60px 20px;
+}
+
+.offers .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offers .heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.offers .heading h2 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.offers .subheading {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.offers .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0px;
+}
+
+.offers .row.reverse {
+    flex-direction: row-reverse;
+}
+
+.offers .imgs {
+    width: 40%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.offers .imgs img {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.offers .text {
+    flex: 1;
+    width: 50%;
+    padding-left: 50px;
+}
+
+.offers .text h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.offers .discount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkcyan;
+    margin-bottom: 10px;
+}
+
+.offers .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.offers .shop-btn {
+    background-color: darkcyan;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.offers .shop-btn:hover {
+    background-color: #007474;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .offers .row,
+    .offers .row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .offers .imgs,
+    .offers .text {
+        max-width: 100%;
+    }
+
+    .offers .imgs img {
+        width: 100%;
+    }
+
+    .offers .shop-btn {
+        margin-top: 15px;
+    }
+}
